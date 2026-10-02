@@ -191,6 +191,44 @@ h2 {
   flex: 1;
 }
 
+.pill-subtitle {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.pill-sublist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pill-sublist li {
+  padding-left: 16px;
+  position: relative;
+}
+
+.pill-sublist li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: var(--purple-light);
+}
+
+@media (max-width: 768px) {
+  .pill-item {
+    padding: 12px 14px;
+  }
+  .pill-subtitle {
+    font-size: 14px;
+  }
+  .pill-sublist li {
+    font-size: 13px;
+  }
+}
 .lightbox-overlay {
   position: fixed;
   inset: 0;
